@@ -33,7 +33,7 @@ cacheSolve <- function(x, ...) {
 	
 	if(is.null(i)) {
 		my_matrix <- x$get()
-		i <- solve(my_matrix)
+		i <- solve(my_matrix, ...)
 		x$set_inverse(i)
 	} else {
 		message("getting cached data")
